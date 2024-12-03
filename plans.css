@@ -1,57 +1,160 @@
 #subscriptionOptions label {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: flex-start;
+
     gap: 15px;
+
     margin-bottom: 15px;
+
 }
 
 .badge {
+
     display: inline-block;
+
     background-color: #01C2AE;
+
     color: #ffffff;
+
     font-size: 12px;
+
     padding: 5px 10px;
+
     border-radius: 20px;
+
     text-transform: uppercase;
+
     font-weight: bold;
+
     white-space: nowrap;
+
 }
 
 .badge:last-child {
+
     background-color: #ff4d4d;
+
     color: #ffffff;
+
 }
 
 #addToCartButton {
+
     display: inline-block;
+
     width: 100%;
+
     max-width: 300px;
+
     margin: 20px auto;
+
     padding: 12px;
+
     background-color: #007bff;
+
     color: white;
+
     font-size: 16px;
+
     border-radius: 8px;
+
     text-align: center;
+
     border: none;
+
     cursor: pointer;
+
     transition: background-color 0.3s ease;
+
 }
 
 #addToCartButton:hover {
+
     background-color: #0056b3;
+
 }
 
 .product img {
+
     display: block;
+
     margin: 0 auto 10px;
+
     border-radius: 8px;
+
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+
 }
 
 h5#subscriptionTitle {
+
     text-align: center;
+
     font-size: 18px;
+    color: #333;
+
     margin-bottom: 15px;
+
 }
+  
+
+   /* تصميم حاوية كل خيار اشتراك */
+#option1, #option2, #option3, #option4 {
+    display: flex; /* سيجعل المحتوى داخل الحاوية يتوزع أفقيًا */
+    align-items: center; /* محاذاة المحتويات بشكل رأسي */
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%; /* تأخذ العرض الكامل */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+/* تغيير اللون عند التمرير بالفأرة */
+#option1:hover, #option2:hover, #option3:hover, #option4:hover {
+    background-color: #f0f8ff; /* تغيير الخلفية عند التمرير */
+}
+
+/* تغيير اللون عند الضغط */
+#option1:active, #option2:active, #option3:active, #option4:active {
+    background-color: #e0e0e0; /* تغيير الخلفية عند الضغط */
+}
+
+/* تصميم النص داخل كل خيار اشتراك */
+#option1 .subscription-text, #option2 .subscription-text, #option3 .subscription-text, #option4 .subscription-text {
+    flex-grow: 1; /* سيشغل النص المساحة المتاحة */
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* تصميم زر الراديو */
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* تخصيص عرض خيارات الاشتراك للموبايل */
+@media screen and (max-width: 768px) {
+    #option1, #option2, #option3, #option4 {
+        flex-direction: column; /* لجعل كل خيار يظهر في صف عمودي في الهواتف */
+        align-items: flex-start; /* محاذاة العناصر في الجهة اليسرى */
+    }
+
+    #option1 .subscription-text, #option2 .subscription-text, #option3 .subscription-text, #option4 .subscription-text {
+        text-align: left; /* محاذاة النص لليسار في الأجهزة الصغيرة */
+        margin-bottom: 10px;
+    }
+}
+  
+  
+
+
+  
